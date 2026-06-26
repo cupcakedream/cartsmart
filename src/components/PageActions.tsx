@@ -16,13 +16,6 @@ const ArrowRightIcon = () => (
   </svg>
 );
 
-const PlusIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10" />
-    <path d="M12 8v8M8 12h8" />
-  </svg>
-);
-
 function PageActionLink({ label, onClick, variant = 'secondary', icon, hideArrow }: PageActionLinkProps & { hideArrow?: boolean }) {
   if (variant === 'link') {
     return (
@@ -47,7 +40,7 @@ function PageActionLink({ label, onClick, variant = 'secondary', icon, hideArrow
 
 export function PageActions({ pathname, callbacks }: { pathname: string; callbacks?: { onAddFood?: () => void } }) {
   const navigate = useNavigate();
-  const { getMostRecentShoppingList, uncheckAllShoppingListItems, getCurrentMealPlan } = useGrocery();
+  const { getMostRecentShoppingList, getCurrentMealPlan } = useGrocery();
 
   if (pathname === '/items') {
     return (

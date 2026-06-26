@@ -57,7 +57,6 @@ export function MealEditorView({ mealId, onBack }: MealEditorViewProps) {
       );
     }
     setNewIngredientName('');
-    setShowAddIngredientForm(false);
   }
 
   async function handleSubmit(event: FormEvent) {

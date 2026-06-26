@@ -10,7 +10,7 @@ import {
 import type { Department } from '../constants/departments';
 import type { DayOfWeek } from '../constants/daysOfWeek';
 import { getStorage } from '../storage';
-import type { Ingredient, Meal, MealPlan, ShoppingList } from '../types';
+import type { AppData, Ingredient, Meal, MealPlan, ShoppingList } from '../types';
 import { DEFAULT_DATA } from '../data/defaultData';
 
 // Module-level lock: prevents React StrictMode's double-mount from seeding twice.

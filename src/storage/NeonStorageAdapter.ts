@@ -57,7 +57,11 @@ function assertOk<T>(result: { data: T | null; error: unknown }, context: string
 }
 
 export class NeonStorageAdapter implements StorageAdapter {
-  constructor(private readonly db: NeonClient) {}
+  private readonly db: NeonClient;
+
+  constructor(db: NeonClient) {
+    this.db = db;
+  }
 
   async load(): Promise<AppData> {
     const [
@@ -149,7 +153,7 @@ export class NeonStorageAdapter implements StorageAdapter {
             department: i.department,
           })),
           { onConflict: 'id' },
-        ),
+        ) as unknown as Promise<unknown>,
       );
     }
 
@@ -160,7 +164,7 @@ export class NeonStorageAdapter implements StorageAdapter {
           current_meal_plan_id: data.currentMealPlanId,
         },
         { onConflict: 'user_id' },
-      ),
+      ) as unknown as Promise<unknown>,
     );
 
     await Promise.all(ops);

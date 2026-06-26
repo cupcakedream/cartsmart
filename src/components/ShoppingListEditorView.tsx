@@ -13,7 +13,6 @@ export function ShoppingListEditorView({ listId }: ShoppingListEditorViewProps) 
     ingredients,
     meals,
     shoppingLists,
-    addIngredientToShoppingList,
     addIngredientsToShoppingList,
     removeIngredientFromShoppingList,
     addMealToShoppingList,
