@@ -25,7 +25,7 @@ export function MealsView({ onEditMeal }: MealsViewProps) {
     <section className="view">
       <ViewHeader
         title="Meals"
-        subtitle="Schedule your meals across the week to stay on track."
+        subtitle="Add your meals so you can quickly build shopping lists and meal plans."
       />
 
       {meals.length === 0 ? (

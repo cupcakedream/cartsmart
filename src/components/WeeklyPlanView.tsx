@@ -22,7 +22,7 @@ export function WeeklyPlanView({ planId, onEditDay }: WeeklyPlanViewProps) {
   if (!plan) {
     return (
       <section className="view">
-        <ViewHeader title="Meal plan" subtitle="No meal plan yet." />
+        <ViewHeader title="Meal plan" subtitle="Schedule your meals across the week to stay on track." />
         <p className="empty-state">No meal plan yet. Create one from Manage Plans.</p>
       </section>
     );
@@ -31,7 +31,7 @@ export function WeeklyPlanView({ planId, onEditDay }: WeeklyPlanViewProps) {
   if (meals.length === 0) {
     return (
       <section className="view">
-        <ViewHeader title={plan.name} subtitle="Weekly meal plan." />
+        <ViewHeader title={plan.name} subtitle="Schedule your meals across the week to stay on track." />
         <p className="empty-state">No meals yet. Add meals first, then assign them to days.</p>
       </section>
     );
@@ -43,7 +43,7 @@ export function WeeklyPlanView({ planId, onEditDay }: WeeklyPlanViewProps) {
 
   return (
     <section className="view">
-      <ViewHeader title={plan.name} subtitle="Weekly meal plan." />
+      <ViewHeader title={plan.name} subtitle="Schedule your meals across the week to stay on track." />
 
       <div className="weekly-plan">
         {scheduledGroups.map((group) => (

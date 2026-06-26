@@ -31,7 +31,7 @@ export function ShoppingListView() {
       <section className="view">
         <ViewHeader
           title="Shopping List"
-          subtitle="Your shopping list, organized by department. Add meals or individual foods and check off items as you go."
+          subtitle="Add meals or individual foods and check off items as you go."
         />
         <p className="empty-state">Your list will appear here once you create a plan.</p>
       </section>
@@ -48,7 +48,7 @@ export function ShoppingListView() {
     <section className="view">
       <ViewHeader
         title={list.name}
-          subtitle="Your shopping list, organized by department. Add meals or individual foods and check off items as you go."
+          subtitle="Add meals or individual foods and check off items as you go."
       />
 
       {groups.length === 0 ? (
