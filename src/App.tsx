@@ -24,7 +24,7 @@ function AuthGate() {
   const session = neon.auth.useSession();
   const token = new URLSearchParams(window.location.search).get('token');
 
-  if (session.isPending) {
+  if (session.isPending && session.data === undefined) {
     return <div className="loading">Loading&hellip;</div>;
   }
 

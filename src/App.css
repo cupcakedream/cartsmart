@@ -1120,18 +1120,21 @@ button.field-control {
 }
 
 .auth-logo-icon {
-  width: 2rem;
-  height: 2rem;
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .auth-logo-text {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 900;
+  line-height: 1;
   color: #1a3d2a;
   letter-spacing: 0.2px;
+  transform: translateY(0.06em);
 }
 
 .auth-title {
@@ -1245,7 +1248,7 @@ button.field-control {
   text-underline-offset: 2px;
 }
 
-.auth-link:hover {
+.auth-link:hover:not(:disabled) {
   background: none;
   color: #1a5c35;
 }
